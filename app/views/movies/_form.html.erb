@@ -16,13 +16,14 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
-<br><br>
+<br>
 
   <div>
   <%= form.label :client_id, style: "display block" %>
+  <br>
   <%= form.collection_select :client_id, @clients, :id, :name %>
   </div>
-<br><br>
+<br>
   <div>
     <%= form.submit %>
   </div>
