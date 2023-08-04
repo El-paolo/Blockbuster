@@ -10,12 +10,19 @@
       </ul>
     </div>
   <% end %>
+  <br><br>
 
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
+<br><br>
 
+  <div>
+  <%= form.label :client_id, style: "display block" %>
+  <%= form.collection_select :client_id, @clients, :id, :name %>
+  </div>
+<br><br>
   <div>
     <%= form.submit %>
   </div>
