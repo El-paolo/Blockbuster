@@ -3,5 +3,19 @@
     <strong>Name:</strong>
     <%= client.name %>
   </p>
+  
+  <% if client.movie_id.nil? %>
+  <p>
+    <%=client.name%>
+  doesn't have any movie
+  </p>
+  <% else %>
+  <p>
+  
+  <strong><%= client.name   %></strong>
+  has rented <%= client.movie.name %>
+  </p>
+  <% end %>
+
 
 </div>
