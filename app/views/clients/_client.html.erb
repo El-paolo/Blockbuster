@@ -1,21 +1,21 @@
-<div id="<%= dom_id client %>">
-  <p>
-    <strong>Name:</strong>
-    <%= client.name %>
-  </p>
+
+<div  class="card" style="width: 18rem;" id="<%= dom_id client %>">
+  <div class="card-body" >
+    <h5 class="card-title" >Name: <%= client.name %></h5>
+    <p class="card-text" >
+        <% if client.movie_id.nil? %>
+          <p>
+            <%=client.name%>
+          doesn't have any movie
+          </p>
+        <% else %>
+    <p>
   
-  <% if client.movie_id.nil? %>
-  <p>
-    <%=client.name%>
-  doesn't have any movie
-  </p>
-  <% else %>
-  <p>
-  
-  <strong><%= client.name   %></strong>
+  <strong><%= client.name%></strong>
   has rented <%= client.movie.name %>
   </p>
   <% end %>
-
-
+    
+    </p>
+</div>
 </div>
