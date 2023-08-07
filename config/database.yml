@@ -88,3 +88,4 @@ production:
   database: BlockBuster_production
   username: BlockBuster
   password: <%= ENV["BLOCKBUSTER_DATABASE_PASSWORD"] %>
+  url: <%= ['DATABASE_URL'] %> 
