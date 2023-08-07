@@ -13,20 +13,25 @@
  *= require_tree .
  *= require_self
  */
-
  body{
     font-family: 'Oswald', sans-serif;
     font-family: 'Raleway', sans-serif;
  }
-
  p{
     font-size: 1em;
  }
-
  .nav-bar-custom{
     background-color:rgb(3, 46, 238);
     font-weight: 700 ;
  }
+ .custom-nav-link{
+   color: rgb(241, 241, 0) ;
+ }
+ .custom-link{
+   text-decoration: none;
+   cursor: pointer; 
+ }
+ 
  .logo{
     font-weight: bold;
     font-size: 2em;
