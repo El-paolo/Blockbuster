@@ -39,7 +39,8 @@ class MoviesController < ApplicationController
   def update
     respond_to do |format|
       if @movie.update(movie_params)
-        
+        client = Client.find(params[:movie][:client_id]) unless params[:movie][:client_id].blank?
+        client&.update(movie_id: @movie.id)
         format.html { redirect_to movie_url(@movie), notice: "Movie was successfully updated." }
         format.json { render :show, status: :ok, location: @movie }
       else
