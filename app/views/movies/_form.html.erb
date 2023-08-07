@@ -21,7 +21,7 @@
   <div>
   <%= form.label :client_id, style: "display block" %>
   <br>
-  <%= form.collection_select :client_id, @clients, :id, :name, {include_blank: true} %>
+  <%= form.collection_select :client_id, @clients, :id, :name %>
   </div>
 <br>
   <div>
